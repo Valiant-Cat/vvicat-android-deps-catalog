@@ -1,7 +1,7 @@
 # Android Deps Catalog
 
 [![Deploy](https://github.com/Valiant-Cat/android-deps-catalog/actions/workflows/deploy.yml/badge.svg)](https://github.com/Valiant-Cat/android-deps-catalog/actions/workflows/deploy.yml)
-[![Latest Release](https://img.shields.io/github/v/release/Valiant-Cat/android-deps-catalog?label=release)](https://github.com/Valiant-Cat/android-deps-catalog/releases)
+[![Release](https://img.shields.io/badge/release-0.0.3-blue)](https://github.com/Valiant-Cat/android-deps-catalog/releases)
 
 Android 团队共享的 Gradle Version Catalog，用于集中维护第三方依赖、AndroidX 依赖和 Gradle 插件版本。
 
