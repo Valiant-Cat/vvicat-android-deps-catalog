@@ -101,7 +101,7 @@ jobs:
               flags=re.S,
           )
 
-          before_structure, separator, after_structure = text.partition("## 本仓库结构")
+          before_structure, separator, after_structure = text.partition("## 仓库结构")
           before_structure = re.sub(
               r"com\.vvicat\.android:deps-catalog:[0-9]+(?:\.[0-9]+){2}(?:[-+][A-Za-z0-9._-]+)?",
               f"com.vvicat.android:deps-catalog:{version}",
