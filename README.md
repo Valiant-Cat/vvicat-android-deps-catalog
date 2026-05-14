@@ -1,5 +1,8 @@
 # Android Deps Catalog
 
+[![Deploy](https://github.com/Valiant-Cat/android-deps-catalog/actions/workflows/deploy.yml/badge.svg)](https://github.com/Valiant-Cat/android-deps-catalog/actions/workflows/deploy.yml)
+[![Latest Release](https://img.shields.io/github/v/release/Valiant-Cat/android-deps-catalog?label=release)](https://github.com/Valiant-Cat/android-deps-catalog/releases)
+
 Android 团队共享的 Gradle Version Catalog，用于集中维护第三方依赖、AndroidX 依赖和 Gradle 插件版本。
 
 下游项目只需要引入一个 Maven 坐标，就可以复用本仓库维护的 `libs.versions.toml`。
