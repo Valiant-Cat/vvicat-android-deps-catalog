@@ -7,10 +7,10 @@
 ## Maven 坐标
 
 ```text
-com.vvicat.android:deps-catalog:0.0.1
+com.vvicat.android:deps-catalog:<version>
 ```
 
-默认版本号为 `0.0.1`。发布时可通过 Gradle 属性或环境变量 `VERSION_NAME` 覆盖。
+真实版本号以发布时的 `VERSION_NAME` 为准。GitHub Actions 通过 tag 自动发布时，tag `vX.Y.Z` 会发布版本 `X.Y.Z`。
 
 ## 下游项目接入
 
@@ -33,11 +33,13 @@ dependencyResolutionManagement {
 
     versionCatalogs {
         create("libs") {
-            from("com.vvicat.android:deps-catalog:0.0.1")
+            from("com.vvicat.android:deps-catalog:<version>")
         }
     }
 }
 ```
+
+将 `<version>` 替换为已经发布的真实版本号，例如 `0.0.2`。
 
 然后在模块 `build.gradle.kts` 中使用：
 
@@ -116,7 +118,7 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 ./gradlew -p example assembleDebug
 ```
 
-默认会从 `mavenLocal()` 读取 `com.vvicat.android:deps-catalog:0.0.1`。如需验证其他 catalog 版本：
+`example` 默认会从 `mavenLocal()` 读取 `com.vvicat.android:deps-catalog:0.0.1`，这是本地开发默认值，不代表远程 Maven 最新版本。如需验证其他 catalog 版本：
 
 ```bash
 VERSION_CATALOG_VERSION=0.0.2 ./gradlew -p example testDebugUnitTest
