@@ -23,21 +23,16 @@ publishing {
     }
 
     repositories {
-        val mavenUrl = providers.gradleProperty("MAVEN_URL")
-            .orElse(providers.environmentVariable("MAVEN_URL"))
+        maven {
+            url = uri("https://packages.aliyun.com/maven/repository/2179341-release-zlWhtt/")
 
-        if (mavenUrl.isPresent) {
-            maven {
-                url = uri(mavenUrl.get())
-
-                credentials {
-                    username = providers.gradleProperty("MAVEN_USERNAME")
-                        .orElse(providers.environmentVariable("MAVEN_USERNAME"))
-                        .orNull
-                    password = providers.gradleProperty("MAVEN_PASSWORD")
-                        .orElse(providers.environmentVariable("MAVEN_PASSWORD"))
-                        .orNull
-                }
+            credentials {
+                username = providers.gradleProperty("MAVEN_USERNAME")
+                    .orElse(providers.environmentVariable("MAVEN_USERNAME"))
+                    .orNull
+                password = providers.gradleProperty("MAVEN_PASSWORD")
+                    .orElse(providers.environmentVariable("MAVEN_PASSWORD"))
+                    .orNull
             }
         }
     }

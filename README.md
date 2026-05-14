@@ -152,7 +152,6 @@ VERSION_CATALOG_VERSION=0.0.2 ./gradlew -p example testDebugUnitTest
 发布前需要在 GitHub 仓库 `Settings -> Secrets and variables -> Actions` 配置：
 
 ```text
-MAVEN_URL
 MAVEN_USERNAME
 MAVEN_PASSWORD
 ```
@@ -181,7 +180,6 @@ VERSION_NAME=0.0.3 ./gradlew publish
 发布配置不要写入仓库。请放到本机 `~/.gradle/gradle.properties`、环境变量或 GitHub Actions Secrets 中：
 
 ```properties
-MAVEN_URL=https://packages.aliyun.com/maven/repository/2179341-release-zlWhtt/
 MAVEN_USERNAME=your-maven-username
 MAVEN_PASSWORD=your-maven-password
 VERSION_NAME=0.0.3
