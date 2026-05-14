@@ -7,11 +7,11 @@
 ## Maven 坐标
 
 <!-- latest-version-start -->
-当前发布版本：`0.0.1`
+当前发布版本：`0.0.2`
 <!-- latest-version-end -->
 
 ```text
-com.vvicat.android:deps-catalog:0.0.1
+com.vvicat.android:deps-catalog:0.0.2
 ```
 
 GitHub Actions 发布成功后会自动更新这里的版本号。通过 tag 自动发布时，tag `vX.Y.Z` 会发布版本 `X.Y.Z`。
@@ -37,7 +37,7 @@ dependencyResolutionManagement {
 
     versionCatalogs {
         create("libs") {
-            from("com.vvicat.android:deps-catalog:0.0.1")
+            from("com.vvicat.android:deps-catalog:0.0.2")
         }
     }
 }
