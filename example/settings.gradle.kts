@@ -19,7 +19,7 @@ dependencyResolutionManagement {
     }
 
     versionCatalogs {
-        create("libs") {
+        create("deps") {
             val catalogVersion = providers.gradleProperty("VERSION_CATALOG_VERSION")
                 .orElse(providers.environmentVariable("VERSION_CATALOG_VERSION"))
                 .orElse("0.0.1")

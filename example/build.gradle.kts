@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(deps.plugins.android.application)
 }
 
 android {
@@ -16,23 +16,23 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
+    implementation(deps.androidx.core.ktx)
+    implementation(deps.androidx.lifecycle.runtime.ktx)
+    implementation(deps.androidx.activity.compose)
 
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.compose.ui)
-    implementation(libs.androidx.compose.ui.graphics)
-    implementation(libs.androidx.compose.ui.tooling.preview)
-    implementation(libs.androidx.compose.material3)
+    implementation(platform(deps.androidx.compose.bom))
+    implementation(deps.androidx.compose.ui)
+    implementation(deps.androidx.compose.ui.graphics)
+    implementation(deps.androidx.compose.ui.tooling.preview)
+    implementation(deps.androidx.compose.material3)
 
-    testImplementation(libs.junit)
+    testImplementation(deps.junit)
 
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.androidx.test.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    androidTestImplementation(deps.androidx.test.ext.junit)
+    androidTestImplementation(deps.androidx.test.espresso.core)
+    androidTestImplementation(platform(deps.androidx.compose.bom))
+    androidTestImplementation(deps.androidx.compose.ui.test.junit4)
 
-    debugImplementation(libs.androidx.compose.ui.tooling)
-    debugImplementation(libs.androidx.compose.ui.test.manifest)
+    debugImplementation(deps.androidx.compose.ui.tooling)
+    debugImplementation(deps.androidx.compose.ui.test.manifest)
 }

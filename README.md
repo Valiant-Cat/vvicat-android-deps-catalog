@@ -39,7 +39,7 @@ dependencyResolutionManagement {
     }
 
     versionCatalogs {
-        create("libs") {
+        create("deps") {
             from("com.vvicat.android:deps-catalog:0.0.4")
         }
     }
@@ -50,20 +50,20 @@ dependencyResolutionManagement {
 
 ```kotlin
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    alias(deps.plugins.android.application)
+    alias(deps.plugins.kotlin.android)
+    alias(deps.plugins.kotlin.compose)
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.compose.ui)
-    implementation(libs.androidx.compose.material3)
+    implementation(deps.androidx.core.ktx)
+    implementation(platform(deps.androidx.compose.bom))
+    implementation(deps.androidx.compose.ui)
+    implementation(deps.androidx.compose.material3)
 
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.androidx.test.espresso.core)
+    testImplementation(deps.junit)
+    androidTestImplementation(deps.androidx.test.ext.junit)
+    androidTestImplementation(deps.androidx.test.espresso.core)
 }
 ```
 
