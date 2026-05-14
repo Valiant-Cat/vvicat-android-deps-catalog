@@ -133,7 +133,7 @@ com.vvicat.android:deps-catalog:+
 如需验证其他本地 catalog 版本：
 
 ```bash
-VERSION_CATALOG_VERSION=0.0.2 ./gradlew -p example testDebugUnitTest
+DEPS_CATALOG_VERSION=0.0.2 ./gradlew -p example testDebugUnitTest
 ```
 
 ## 发布

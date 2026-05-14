@@ -20,8 +20,8 @@ dependencyResolutionManagement {
 
     versionCatalogs {
         create("deps") {
-            val catalogVersion = providers.gradleProperty("VERSION_CATALOG_VERSION")
-                .orElse(providers.environmentVariable("VERSION_CATALOG_VERSION"))
+            val catalogVersion = providers.gradleProperty("DEPS_CATALOG_VERSION")
+                .orElse(providers.environmentVariable("DEPS_CATALOG_VERSION"))
                 .orElse("+")
                 .get()
 
