@@ -143,7 +143,7 @@ VERSION_CATALOG_VERSION=0.0.2 ./gradlew -p example testDebugUnitTest
 
 - `pull_request`：只验证，不发布。
 - `push main`：只验证，不发布。
-- `push tag v*`：验证通过后发布到 Maven。
+- `push tag v*`：验证通过后发布到 Maven，并创建 GitHub Release。
 - `workflow_dispatch`：手动输入版本号并发布。
 
 发布前需要在 GitHub 仓库 `Settings -> Secrets and variables -> Actions` 配置：
@@ -161,7 +161,11 @@ git tag v0.0.3
 git push origin v0.0.3
 ```
 
-发布成功后，workflow 会自动把 README 中的当前发布版本和接入示例更新为新版本。
+发布成功后，workflow 会自动：
+
+- 把 README 中的当前发布版本和接入示例更新为新版本。
+- 创建同名 GitHub Release。
+- 用 GitHub 自动生成的 release notes 作为 changelog。
 
 ### 手动发布
 
