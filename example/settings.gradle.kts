@@ -25,9 +25,9 @@ dependencyResolutionManagement {
                 .orElse("0.0.1")
                 .get()
 
-            from("com.vvicat:deps-catalog:$catalogVersion")
+            from("com.vvicat.android:deps-catalog:$catalogVersion")
         }
     }
 }
 
-rootProject.name = "vvicat-deps-catalog-example"
+rootProject.name = "android-deps-catalog-example"

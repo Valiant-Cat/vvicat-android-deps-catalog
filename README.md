@@ -1,4 +1,4 @@
-# Vvicat Deps Catalog
+# Android Deps Catalog
 
 共享的 Gradle Version Catalog 仓库，用于统一维护团队项目里的第三方依赖、AndroidX 依赖和 Gradle 插件版本。
 
@@ -7,7 +7,7 @@
 ## Maven 坐标
 
 ```text
-com.vvicat:deps-catalog:0.0.1
+com.vvicat.android:deps-catalog:0.0.1
 ```
 
 默认版本号为 `0.0.1`。发布时可通过 Gradle 属性或环境变量 `VERSION_NAME` 覆盖。
@@ -33,7 +33,7 @@ dependencyResolutionManagement {
 
     versionCatalogs {
         create("libs") {
-            from("com.vvicat:deps-catalog:0.0.1")
+            from("com.vvicat.android:deps-catalog:0.0.1")
         }
     }
 }
@@ -116,7 +116,7 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 ./gradlew -p example assembleDebug
 ```
 
-默认会从 `mavenLocal()` 读取 `com.vvicat:deps-catalog:0.0.1`。如需验证其他 catalog 版本：
+默认会从 `mavenLocal()` 读取 `com.vvicat.android:deps-catalog:0.0.1`。如需验证其他 catalog 版本：
 
 ```bash
 VERSION_CATALOG_VERSION=0.0.2 ./gradlew -p example testDebugUnitTest

@@ -8,4 +8,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "vvicat-deps-catalog"
+rootProject.name = "android-deps-catalog"

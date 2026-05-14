@@ -12,7 +12,7 @@ catalog {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = "com.vvicat"
+            groupId = "com.vvicat.android"
             artifactId = "deps-catalog"
             version = providers.gradleProperty("VERSION_NAME")
                 .orElse(providers.environmentVariable("VERSION_NAME"))
