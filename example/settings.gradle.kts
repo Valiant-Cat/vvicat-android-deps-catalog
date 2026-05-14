@@ -22,7 +22,7 @@ dependencyResolutionManagement {
         create("deps") {
             val catalogVersion = providers.gradleProperty("VERSION_CATALOG_VERSION")
                 .orElse(providers.environmentVariable("VERSION_CATALOG_VERSION"))
-                .orElse("0.0.1")
+                .orElse("+")
                 .get()
 
             from("com.vvicat.android:deps-catalog:$catalogVersion")

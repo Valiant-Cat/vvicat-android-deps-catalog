@@ -40,7 +40,7 @@ dependencyResolutionManagement {
 
     versionCatalogs {
         create("deps") {
-            from("com.vvicat.android:deps-catalog:0.0.4")
+            from("com.vvicat.android:deps-catalog:+")
         }
     }
 }
@@ -124,10 +124,10 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 ./gradlew -p example assembleDebug
 ```
 
-`example` 默认从 `mavenLocal()` 读取：
+`example` 默认从 `mavenLocal()` 读取最新版本：
 
 ```text
-com.vvicat.android:deps-catalog:0.0.1
+com.vvicat.android:deps-catalog:+
 ```
 
 如需验证其他本地 catalog 版本：
