@@ -6,11 +6,15 @@
 
 ## Maven 坐标
 
+<!-- latest-version-start -->
+当前发布版本：`0.0.1`
+<!-- latest-version-end -->
+
 ```text
-com.vvicat.android:deps-catalog:<version>
+com.vvicat.android:deps-catalog:0.0.1
 ```
 
-真实版本号以发布时的 `VERSION_NAME` 为准。GitHub Actions 通过 tag 自动发布时，tag `vX.Y.Z` 会发布版本 `X.Y.Z`。
+GitHub Actions 发布成功后会自动更新这里的版本号。通过 tag 自动发布时，tag `vX.Y.Z` 会发布版本 `X.Y.Z`。
 
 ## 下游项目接入
 
@@ -33,13 +37,13 @@ dependencyResolutionManagement {
 
     versionCatalogs {
         create("libs") {
-            from("com.vvicat.android:deps-catalog:<version>")
+            from("com.vvicat.android:deps-catalog:0.0.1")
         }
     }
 }
 ```
 
-将 `<version>` 替换为已经发布的真实版本号，例如 `0.0.2`。
+上面的版本号会在自动发布成功后更新为真实已发布版本。
 
 然后在模块 `build.gradle.kts` 中使用：
 
