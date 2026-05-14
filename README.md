@@ -1,7 +1,7 @@
 # Android Deps Catalog
 
 [![Deploy](https://github.com/Valiant-Cat/android-deps-catalog/actions/workflows/deploy.yml/badge.svg)](https://github.com/Valiant-Cat/android-deps-catalog/actions/workflows/deploy.yml)
-[![Release](https://img.shields.io/badge/release-0.0.3-blue)](https://github.com/Valiant-Cat/android-deps-catalog/releases)
+[![Release](https://img.shields.io/badge/release-0.0.4-blue)](https://github.com/Valiant-Cat/android-deps-catalog/releases)
 
 Android 团队共享的 Gradle Version Catalog，用于集中维护第三方依赖、AndroidX 依赖和 Gradle 插件版本。
 
@@ -10,11 +10,11 @@ Android 团队共享的 Gradle Version Catalog，用于集中维护第三方依�
 ## 当前版本
 
 <!-- latest-version-start -->
-当前发布版本：`0.0.3`
+当前发布版本：`0.0.4`
 <!-- latest-version-end -->
 
 ```text
-com.vvicat.android:deps-catalog:0.0.3
+com.vvicat.android:deps-catalog:0.0.4
 ```
 
 GitHub Actions 发布成功后会自动更新这里的版本号。通过 tag 发布时，`vX.Y.Z` 会发布 Maven 版本 `X.Y.Z`。
@@ -40,7 +40,7 @@ dependencyResolutionManagement {
 
     versionCatalogs {
         create("libs") {
-            from("com.vvicat.android:deps-catalog:0.0.3")
+            from("com.vvicat.android:deps-catalog:0.0.4")
         }
     }
 }
