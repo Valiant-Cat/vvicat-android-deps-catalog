@@ -136,6 +136,30 @@ VERSION_CATALOG_VERSION=0.0.2 ./gradlew -p example testDebugUnitTest
 ./gradlew publish
 ```
 
+## GitHub Actions 自动发布
+
+仓库内置 [Deploy workflow](.github/workflows/deploy.yml)：
+
+- `pull_request`：验证 catalog 生成、本机发布和 example 单元测试。
+- `push main`：执行同样的轻量验证。
+- `push tag v*`：先验证，再发布到 Maven 仓库。tag `v0.0.2` 会发布版本 `0.0.2`。
+- `workflow_dispatch`：手动输入版本号并发布。
+
+发布前需要在 GitHub 仓库 `Settings -> Secrets and variables -> Actions` 配置：
+
+```text
+MAVEN_URL
+MAVEN_USERNAME
+MAVEN_PASSWORD
+```
+
+发布新版本：
+
+```bash
+git tag v0.0.2
+git push origin v0.0.2
+```
+
 指定版本发布：
 
 ```bash
